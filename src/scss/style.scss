@@ -6,6 +6,30 @@
     background: #eee;
 }
 
+.box {
+    position: relative;
+    .down {
+        width: 100%;
+        height: pxTorem(50px);
+        background: #ccc;
+        line-height: pxTorem(50px);
+        text-align: center;
+        position: absolute;
+        top: pxTorem(-50px);
+        font-size: pxTorem(20px);
+    }
+    .up {
+        width: 100%;
+        height: pxTorem(50px);
+        background: #ccc;
+        line-height: pxTorem(50px);
+        text-align: center;
+        position: absolute;
+        bottom: pxTorem(-50px);
+        font-size: pxTorem(20px);
+    }
+}
+
 .header {
     width: 100%;
     height: pxTorem(155px);
@@ -189,4 +213,8 @@ footer {
         text-align: center;
         margin-top: pxTorem(80px);
     }
+}
+
+.none {
+    display: none;
 }

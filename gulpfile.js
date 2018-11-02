@@ -22,7 +22,7 @@ gulp.task('server', function() {
             port: 8888,
             livereload: true,
             directoryListing: true,
-            open: true,
+            //open: true,
             fallback: 'index.html',
             middleware: function(req, res, next) {
                 if (req.url === '/favicon.ico') {
@@ -31,7 +31,11 @@ gulp.task('server', function() {
                 var pathname = url.parse(req.url).pathname;
                 if (/^\/api/.test(req.url)) { //接口请求
                     if (pathname === '/api/getData') {
-                        res.end(JSON.stringify({ code: 0, data: data.data }));
+                        var idx = url.parse(req.url, true).query.idx;
+                        var start = idx * 4;
+                        var end = start + 4;
+                        var datas = data.data.slice(start, end);
+                        res.end(JSON.stringify({ code: 0, data: datas }));
                     } else {
                         res.end('请求失败!');
                     }
