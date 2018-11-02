@@ -1,0 +1,192 @@
+@import 'common.scss';
+@import 'mixin.scss';
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
+.header {
+    width: 100%;
+    height: pxTorem(155px);
+    border-bottom: solid pxTorem(1px) #ccc;
+    background: url('../images/download_banner.png') no-repeat 100% 100%;
+    color: #fff;
+    header {
+        width: 100%;
+        height: pxTorem(44px);
+        background: #06C1AE;
+        padding: 0 pxTorem(12px);
+        @include sizing;
+        @include box_flex;
+        @include align;
+        @include justify(space-between);
+        >span {
+            font-size: pxTorem(20px);
+            i.iconfont {
+                font-size: pxTorem(12px);
+            }
+        }
+        .search {
+            @include flex;
+            height: pxTorem(32px);
+            margin: 0 pxTorem(13px);
+            border-radius: pxTorem(4px);
+            background: rgba(0, 0, 0, .1);
+            @include box_flex;
+            @include align;
+            @include justify(space-between);
+            i.iconfont {
+                font-size: pxTorem(20px);
+                margin-left: pxTorem(6px);
+            }
+            input {
+                @include flex;
+                font-size: pxTorem(16px);
+                padding-left: pxTorem(10px);
+            }
+        }
+        >dl {
+            text-align: center;
+            i.iconfont {
+                font-size: pxTorem(22px);
+            }
+        }
+    }
+}
+
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+    width: 100%;
+    height: pxTorem(180px);
+    background: #fff;
+    color: gray;
+}
+
+.swiper-pagination-bullet {
+    width: pxTorem(10px)!important;
+    height: pxTorem(10px)!important;
+}
+
+.swiper-container {
+    padding-bottom: pxTorem(20px);
+}
+
+.swiper-slide {
+    font-size: pxTorem(16px);
+    @include box_flex;
+    flex-wrap: wrap;
+    @include align;
+    dl {
+        text-align: center;
+        width: 20%;
+    }
+}
+
+section {
+    width: 100%;
+    margin-top: pxTorem(10px);
+    .guss-like {
+        width: 100%;
+        background: #fff;
+        padding-left: pxTorem(10px);
+        @include sizing;
+        >p {
+            font-size: pxTorem(18px);
+            border-bottom: solid pxTorem(1px) #ccc;
+            line-height: pxTorem(40px);
+        }
+        .list {
+            width: 100%;
+            dl {
+                width: 100%;
+                padding: pxTorem(10px);
+                padding-left: 0;
+                border-bottom: solid pxTorem(1px) #ccc;
+                @include sizing;
+                @include box_flex;
+                @include justify(space-between);
+                img {
+                    width: pxTorem(100px);
+                    height: pxTorem(100px);
+                }
+                dd {
+                    @include flex;
+                    margin-left: pxTorem(10px);
+                    color: gray;
+                    p:nth-child(1) {
+                        font-size: pxTorem(17px);
+                        margin-bottom: pxTorem(5px);
+                        color: #000;
+                    }
+                    p:nth-child(3) {
+                        margin-top: pxTorem(35px);
+                        b {
+                            font-size: pxTorem(17px);
+                            color: #0FC3B1;
+                        }
+                        span:nth-child(2) {
+                            float: right;
+                            position: relative;
+                            top: pxTorem(5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.look {
+    width: 100%;
+    height: pxTorem(44px);
+    color: #28CAB9;
+    padding: 0 pxTorem(15px);
+    border-bottom: solid pxTorem(1px) #ccc;
+    @include sizing;
+    background: #fff;
+    @include box_flex;
+    @include justify(space-between);
+    @include align;
+    span {
+        font-size: pxTorem(17px);
+    }
+    i.iconfont {
+        font-size: pxTorem(22px);
+    }
+}
+
+footer {
+    background: #F0EFED;
+    padding: pxTorem(20px) pxTorem(10px);
+    @include sizing;
+    .login {
+        @include box_flex;
+        @include justify(space-between);
+        span {
+            padding: pxTorem(4px) pxTorem(15px);
+            text-align: center;
+            border: solid pxTorem(1px) #4BD2C5;
+            font-size: pxTorem(15px);
+            color: #4BD2C5;
+            border-radius: pxTorem(3px);
+        }
+    }
+    >p {
+        width: 100%;
+        font-size: pxTorem(13px);
+        text-align: center;
+        a {
+            color: #4BD2C5;
+            padding: 0 pxTorem(15px);
+        }
+        margin:pxTorem(20px) 0;
+    }
+    h2 {
+        color: gray;
+        width: 100%;
+        text-align: center;
+        margin-top: pxTorem(80px);
+    }
+}
