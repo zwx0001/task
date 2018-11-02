@@ -1,10 +1,21 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var webserver = require('gulp-webserver');
+var babel = require('gulp-babel');
+var uglify = require('gulp-uglify');
 var fs = require('fs');
 var path = require('path');
 var url = require('url');
 var data = require('./src/data/data.json');
+//es6转es5
+gulp.task('min', function() {
+    return gulp.src('./src/js/index.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('./src/js/minjs'))
+});
 //编译sass
 gulp.task('sass', function() {
     return gulp.src('./src/scss/style.scss')

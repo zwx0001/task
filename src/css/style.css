@@ -173,6 +173,27 @@ html {
   height: 100%;
   background: #eee; }
 
+.box {
+  position: relative; }
+  .box .down {
+    width: 100%;
+    height: 1.33333rem;
+    background: #ccc;
+    line-height: 1.33333rem;
+    text-align: center;
+    position: absolute;
+    top: -1.33333rem;
+    font-size: 0.53333rem; }
+  .box .up {
+    width: 100%;
+    height: 1.33333rem;
+    background: #ccc;
+    line-height: 1.33333rem;
+    text-align: center;
+    position: absolute;
+    bottom: -1.33333rem;
+    font-size: 0.53333rem; }
+
 .header {
   width: 100%;
   height: 4.13333rem;
@@ -207,7 +228,7 @@ html {
       height: 0.85333rem;
       margin: 0 0.34667rem;
       border-radius: 0.10667rem;
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.1);
       display: flex;
       /* NEW, Spec - Opera 12.1, Firefox 20+ */
       display: -webkit-flex;
@@ -373,3 +394,6 @@ footer {
     width: 100%;
     text-align: center;
     margin-top: 2.13333rem; }
+
+.none {
+  display: none; }
